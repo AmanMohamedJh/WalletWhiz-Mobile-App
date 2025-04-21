@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryGreen">#00C897</color>
+
+    <color name="expenseRed">#FF4C4C</color>
+    <color name="incomeBlue">#1877F2</color>
+    <color name="grayText">#B0B0B0</color>
+    <color name="backgroundGray">#F5F5F5</color>
+    <color name="fieldBg">#EAFBF3</color>
+    <!-- Unique color to avoid theme override -->
+    <color name="walletwhizToggleInactive">#E0E0E0</color>
+    <color name="walletwhizSaveGreen">#00C897</color>
+    <color name="walletwhizSaveRed">#FF4C4C</color>
+    <color name="toggleOutline">#1877F2</color>
+    <color name="debitRed">#FF5252</color>
+    <color name="inactiveGray">#B0BEC5</color>
+    <color name="budgetPageBg">#F8FFFB</color>
+
+    <!-- UPDATED COLORS AS BUTTER PURPLE AND Pink -->
+
+    <color name="primaryButter">#FFDFAA</color>
+    <color name="primaryPink">#FF5A66</color>
+    <color name="primaryPurple">#50115F</color>
+    <color name="creamWhite">#FFF8F0</color>
+</resources>

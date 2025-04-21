@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6FFF7">
+
+    <!-- Top Green Curved Background -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/top_curved_green_bg"
+        android:layout_marginBottom="16dp">
+
+        <!-- Back Arrow & Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="32dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back_white"
+                android:contentDescription="Back"
+                app:tint="@android:color/white"
+                android:padding="8dp" />
+            <TextView
+                android:id="@+id/tvSetBudgetTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set your goal"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Form Fields Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="110dp"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/form_container_bg"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+            <!-- Date Picker -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="#E6FFF7"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="12dp"
+                android:backgroundTint="#D6F5E6"
+                android:clipToPadding="false"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:backgroundTintMode="src_in"
+                android:elevation="0dp"
+                android:clipChildren="false"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="April 30 ,2024"
+                    android:textColor="#4DB6FF"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/btnPickDate"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_calendar"
+                    android:contentDescription="Pick Date"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Category Dropdown -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="#E6FFF7"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="12dp"
+                android:backgroundTint="#D6F5E6"
+                android:clipToPadding="false"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:backgroundTintMode="src_in"
+                android:elevation="0dp"
+                android:clipChildren="false">
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Select the category"
+                    android:textColor="#AAB8B8"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/btnPickCategory"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    android:contentDescription="Pick Category"
+                    app:tint="#4DB6FF"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Amount Field -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Amount"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#E6FFF7"
+                android:textColor="#4DB6FF"
+                android:textSize="16sp"
+                android:hint="Rs 3000000"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#D6F5E6"
+                android:elevation="0dp" />
+
+            <!-- Title Field -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#E6FFF7"
+                android:textColor="#4DB6FF"
+                android:textSize="16sp"
+                android:hint="Buy A Car"
+                android:paddingHorizontal="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#D6F5E6"
+                android:elevation="0dp" />
+
+            <!-- Set Goal Button -->
+            <Button
+                android:id="@+id/btnSetGoal"
+                android:layout_width="220dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#0F7A63"
+                android:elevation="2dp"
+                android:text="Set Goal"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include
+        layout="@layout/layout_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

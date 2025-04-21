@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6FFF7">
+
+    <!-- Top Green Curved Background -->
+    <FrameLayout
+        android:id="@+id/topCurvedGreenBg"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/top_curved_green_bg">
+
+        <!-- Back Arrow & Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="32dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back_white"
+                android:contentDescription="Back"
+                app:tint="@android:color/white"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Transaction"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Income/Expense Toggle -->
+        <LinearLayout
+            android:id="@+id/typeToggleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="80dp">
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="INCOME"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/primaryPurple"
+                android:background="@drawable/toggle_text_outlined"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="8dp" />
+            <TextView
+                android:id="@+id/tvExpense"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="EXPENSE"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/expenseRed"
+                android:background="@drawable/toggle_text_outlined"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Form Fields Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="120dp"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/form_container_bg"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+            <!-- Date Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <!-- Date Picker -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="12dp"
+                android:backgroundTint="#D6F5E6">
+                <EditText
+                    android:id="@+id/editDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Date"
+                    android:text="April 30, 2024"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="0dp"
+                    android:background="@drawable/input_field_modern"
+                    android:textColor="#4DB6FF" />
+                <ImageButton
+                    android:id="@+id/btnDatePicker"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_calendar"
+                    android:contentDescription="Pick Date"
+                    android:padding="8dp" />
+            </LinearLayout>
+            <!-- Category Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <!-- Category Spinner -->
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="#E6FFF7"
+                android:padding="8dp"
+                android:spinnerMode="dropdown"
+                android:layout_marginEnd="8dp" />
+            <!-- Category Selector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/input_field_modern"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="12dp"
+                >
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Salary"
+                    android:textColor="#0B0B0B"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/btnPickCategory"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    android:contentDescription="Pick Category"
+                    android:padding="8dp" />
+            </LinearLayout>
+            <!-- Amount Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <!-- Amount Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/input_field_modern"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="12dp">
+                <EditText
+                    android:id="@+id/editAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Amount"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="0dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="#512da8"
+                    android:textColorHint="#b39ddb" />
+            </LinearLayout>
+            <!-- Title Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <!-- Title Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/input_field_modern"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="12dp">
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Transaction Title"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="0dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="#512da8"
+                    android:textColorHint="#b39ddb" />
+            </LinearLayout>
+            <!-- Note Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+            <!-- Message / Note -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/input_field_modern"
+                app:boxBackgroundMode="none">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:hint="Enter Message"
+                    android:textColor="#512da8"
+                    android:textColorHint="#b39ddb"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="18dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:background="@android:color/transparent"
+                    android:elevation="2dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Update & Delete Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Update"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/primaryPurple"
+                    android:layout_marginEnd="12dp"/>
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Delete"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/primaryPink"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include
+        layout="@layout/layout_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

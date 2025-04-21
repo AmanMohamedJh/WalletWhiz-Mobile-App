@@ -1,0 +1,123 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="6dp"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/goal_item_bg">
+
+        <ImageView
+            android:id="@+id/ivGoalIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_goal"
+            android:contentDescription="Goal Icon"
+            app:tint="@color/primaryGreen"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBudgetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/primaryGreen"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGoalIcon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvBudgetAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rs0.00"
+            android:textSize="18sp"
+            android:textColor="@color/walletwhizSaveRed"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvBudgetTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvBudgetCategory"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <TextView
+            android:id="@+id/tvBudgetCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="16sp"
+            android:textColor="@color/toggleOutline"
+            android:background="@drawable/category_chip_bg"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvBudgetTitle"
+            app:layout_constraintStart_toEndOf="@id/tvBudgetAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvBudgetAmount"/>
+
+        <TextView
+            android:id="@+id/tvBudgetDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="14sp"
+            android:textColor="#8A8A8A"
+            app:layout_constraintTop_toBottomOf="@id/tvBudgetAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivDeleteBudget"
+            app:layout_constraintWidth_percent="0.8"/>
+
+        <ImageView
+            android:id="@+id/ivDeleteBudget"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Delete Budget"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            app:tint="@color/walletwhizSaveRed"
+            app:layout_constraintTop_toTopOf="@id/tvBudgetDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvBudgetDate"/>
+
+        <TextView
+            android:id="@+id/tvGoalDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Keep saving for your dream!"
+            android:textColor="#5F8575"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvBudgetDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvGoalTalk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="You are closer than you think!"
+            android:textColor="#0F7A63"
+            android:textStyle="italic"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/tvGoalDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="6dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/creamWhite">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvSetBudgetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set budget"
+        android:textColor="@color/primaryPink"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="18dp"/>
+
+    <!-- Icon and Category Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:id="@+id/imgCategoryIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_circle"
+            android:padding="8dp"
+            android:contentDescription="Category Icon"/>
+        <TextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bills"
+            android:textColor="@color/primaryPurple"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="14dp"/>
+    </LinearLayout>
+
+    <!-- Limit Field -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limit"
+        android:textColor="@color/primaryPurple"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+    <EditText
+        android:id="@+id/etLimit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_chart_card"
+        android:inputType="numberDecimal"
+        android:textColor="@color/primaryPurple"
+        android:textSize="16sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:hint="Enter limit amount"
+        android:minHeight="48dp"
+        android:importantForAccessibility="yes"/>
+
+    <!-- Month Info -->
+    <TextView
+        android:id="@+id/tvMonthInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month: April, 2025"
+        android:textColor="@color/inactiveGray"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"/>
+
+    <!-- Buttons -->
+    <!-- Removed XML buttons. Buttons are now only added via AlertDialog.Builder in code. -->
+
+</LinearLayout>

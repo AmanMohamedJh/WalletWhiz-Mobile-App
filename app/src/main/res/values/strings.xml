@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">walletwhiz</string>
+    <string name="logo_desc">WalletWhiz logo</string>
+    <string name="onboarding1_title">Welcome To Expense Manager</string>
+    <string name="onboarding2_title">Are You Ready To Take Control Of Your Finances?</string>
+    <string name="onboarding1_image_desc">Hand holding coins illustration</string>
+    <string name="onboarding2_image_desc">Hand holding phone illustration</string>
+    <string name="next">Next</string>
+</resources>
